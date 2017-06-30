@@ -728,7 +728,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   script.Print(" RRRRRRRR     RRRRRRR  RRRRRRRR     RRRRRRR")
   script.Print(" ")
   script.Print(" ")
-  
+
   if GetBuildProp("ro.rr.version", OPTIONS.info_dict) is not None:
     buildid = GetBuildProp("ro.rr.version", OPTIONS.info_dict)
     buildtype = GetBuildProp("rr.build.type", OPTIONS.info_dict)
@@ -736,7 +736,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
     buildday = GetBuildProp("ro.build.date", OPTIONS.info_dict)
     securep = GetBuildProp("ro.build.version.security_patch", OPTIONS.info_dict)
     buildhst = GetBuildProp("ro.build.host", OPTIONS.info_dict)
-    density = GetBuildProp("ro.sf.lcd_density", OPTIONS.info_dict)
+    #density = GetBuildProp("ro.sf.lcd_density", OPTIONS.info_dict)
     device = GetBuildProp("ro.rr.device", OPTIONS.info_dict)
     androidver = GetBuildProp("ro.build.version.release", OPTIONS.info_dict)
     manufacturer = GetBuildProp("ro.product.manufacturer", OPTIONS.info_dict)
@@ -767,10 +767,10 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
     script.Print("");
     script.Print(" Manufacturer: %s"%(manufacturer));
     script.Print("");
-    script.Print(" LCD density: %s"%(density));
+    #script.Print(" LCD density: %s"%(density));
     script.Print("");
     script.Print(" *******************************************");
-  
+
   if OPTIONS.wipe_user_data:
     system_progress -= 0.1
   if HasVendorPartition(input_zip):
